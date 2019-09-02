@@ -1,10 +1,12 @@
 
 //code from vid 26
 import React, { Component } from "react";
-import { StyleSheet, Text, View, TextInput, Button } from "react-native";
+import { StyleSheet, Text, View, TextInput, Button,  ActivityIndicator } from "react-native";
 
 //note the captial letter
 import ListItem from './src/components/Listitem/Listitem';
+
+//add header from prev app
 import Header from './src/components/Header';
 
 export default class App extends Component {
@@ -36,10 +38,10 @@ export default class App extends Component {
       <ListItem key={i} placeName={place} />
     ));
     return (
-      <View style={styles.container}>
+      <View style={{ flex: 1 }}>
 
-        <Header  />
-        
+        <Header loading={this.state.loading} />
+
         <View style={styles.inputContainer}>
           <TextInput
             placeholder="An awesome place test"
