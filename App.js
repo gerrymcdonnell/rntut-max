@@ -5,6 +5,7 @@ import { StyleSheet, Text, View, TextInput, Button } from "react-native";
 
 //note the captial letter
 import ListItem from './src/components/Listitem/Listitem';
+import Header from './src/components/Header';
 
 export default class App extends Component {
   state = {
@@ -36,9 +37,12 @@ export default class App extends Component {
     ));
     return (
       <View style={styles.container}>
+
+        <Header  />
+        
         <View style={styles.inputContainer}>
           <TextInput
-            placeholder="An awesome place"
+            placeholder="An awesome place test"
             value={this.state.placeName}
             onChangeText={this.placeNameChangedHandler}
             style={styles.placeInput}
