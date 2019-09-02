@@ -1,5 +1,5 @@
 import React from 'react';
-import {View,Text,StyleSheet} from 'react-native';
+import {TouchableOpacity,View,Text,StyleSheet} from 'react-native';
 
 const footer = context => (
     <View style={styles.footer}>

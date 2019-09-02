@@ -1,7 +1,7 @@
 
 //code from vid 26
 import React, { Component } from "react";
-import { StyleSheet, Text, View, TextInput, Button,  ActivityIndicator } from "react-native";
+import { TouchableOpacity,StyleSheet, Text, View, TextInput, Button,  ActivityIndicator } from "react-native";
 
 //note the captial letter
 import ListItem from './src/components/Listitem/Listitem';
@@ -45,7 +45,7 @@ export default class App extends Component {
 
         <View style={styles.inputContainer}>
           <TextInput
-            placeholder="An awesome place test"
+            placeholder="An awesome place"
             value={this.state.placeName}
             onChangeText={this.placeNameChangedHandler}
             style={styles.placeInput}
@@ -59,7 +59,7 @@ export default class App extends Component {
         <View style={styles.listContainer}>{placesOutput}</View>
 
 
-        <View style={styles.footer}>
+        <Footer style={styles.footer}>
           <TouchableOpacity>
             <Text style={styles.icon}>⬅️</Text>
           </TouchableOpacity>
@@ -69,7 +69,7 @@ export default class App extends Component {
           <TouchableOpacity>
             <Text style={styles.icon}> ➡️</Text>
           </TouchableOpacity>
-        </View>
+        </Footer>
 
 
       </View>
