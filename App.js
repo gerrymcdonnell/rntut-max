@@ -8,6 +8,7 @@ import ListItem from './src/components/Listitem/Listitem';
 
 //add header from prev app
 import Header from './src/components/Header';
+import Footer from './src/components/Footer';
 
 export default class App extends Component {
   state = {
@@ -56,6 +57,21 @@ export default class App extends Component {
           />
         </View>
         <View style={styles.listContainer}>{placesOutput}</View>
+
+
+        <View style={styles.footer}>
+          <TouchableOpacity>
+            <Text style={styles.icon}>⬅️</Text>
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Text style={styles.icon}>Home</Text>
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Text style={styles.icon}> ➡️</Text>
+          </TouchableOpacity>
+        </View>
+
+
       </View>
     );
   }
