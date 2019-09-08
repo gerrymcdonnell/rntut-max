@@ -1,45 +1,25 @@
-
-//code from vid 26
 import React, { Component } from "react";
 import { TouchableOpacity,StyleSheet, Text, View, TextInput, Button,  ActivityIndicator } from "react-native";
 
 //note the captial letter
 import ListItem from './src/components/Listitem/Listitem';
-
-//add header from prev app
 import Header from './src/components/Header';
-import Footer from './src/components/Footer';
 
 export default class App extends Component {
   state = {
+<<<<<<< HEAD
+=======
     placeName: "",
+>>>>>>> parent of ca62dbf... added default places
     places: []
   };
 
-  placeNameChangedHandler = val => {
-    this.setState({
-      placeName: val
-    });
-  };
-
-  //handler for the add button
-  placeSubmitHandler = () => {
-    //if empty string return
-    if (this.state.placeName.trim() === "") {
-      return;
-    }
-    
-    /**
-     * get the old state
-     * i.e return the array of places name and what the use entered
-     */
+  placeAddedHandler = placeName => {
     this.setState(prevState => {
       return {
-        places: prevState.places.concat(prevState.placeName)
+        places: prevState.places.concat(placeName)
       };
     });
-
-
   };
 
   render() {
@@ -92,21 +72,5 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "flex-start"
-  },
-  inputContainer: {
-    // flex: 1,
-    width: "100%",
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center"
-  },
-  placeInput: {
-    width: "70%"
-  },
-  placeButton: {
-    width: "30%"
-  },
-  listContainer: {
-    width: "100%"
   }
 });
