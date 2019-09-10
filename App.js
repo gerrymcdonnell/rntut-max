@@ -22,24 +22,16 @@ export default class App extends Component {
     });
   };
 
-  //handler for the add button
   placeSubmitHandler = () => {
-    //if empty string return
     if (this.state.placeName.trim() === "") {
       return;
     }
-    
-    /**
-     * get the old state
-     * i.e return the array of places name and what the use entered
-     */
+
     this.setState(prevState => {
       return {
         places: prevState.places.concat(prevState.placeName)
       };
     });
-
-
   };
 
   render() {
@@ -67,7 +59,7 @@ export default class App extends Component {
         <View style={styles.listContainer}>{placesOutput}</View>
 
 
-{/*         <Footer style={styles.footer}>
+        <Footer style={styles.footer}>
           <TouchableOpacity>
             <Text style={styles.icon}>⬅️</Text>
           </TouchableOpacity>
@@ -77,7 +69,7 @@ export default class App extends Component {
           <TouchableOpacity>
             <Text style={styles.icon}> ➡️</Text>
           </TouchableOpacity>
-        </Footer> */}
+        </Footer>
 
 
       </View>
